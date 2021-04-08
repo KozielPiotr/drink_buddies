@@ -1,0 +1,7 @@
+-r tests.txt
+
+black
+flake8
+pre-commit
+pylint
+pylint-django

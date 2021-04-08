@@ -1,0 +1,5 @@
+SECRET_KEY=dummy
+
+POSTGRES_DB=drinking_buddies
+POSTGRES_USER=drinking_buddies
+POSTGRES_PASSWORD=drinking_buddies

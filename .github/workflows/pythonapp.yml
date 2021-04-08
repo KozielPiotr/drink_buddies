@@ -1,0 +1,62 @@
+
+name: Python application
+
+on: [push]
+
+jobs:
+  linters:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements/development.txt
+      - name: Pylint
+        run: pylint --load-plugins pylint_django --django-settings-module=drinking_buddies.settings --fail-under=9 drinking_buddies
+        env:
+          SECRET_KEY: dummy
+        continue-on-error: true
+      - name: Black
+        run: black --check ./
+      - name: Flake8
+        run: flake8 drinking_buddies
+        continue-on-error: true
+
+  build:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:12.4
+        env:
+          POSTGRES_USER: drinking_buddies
+          POSTGRES_PASSWORD: drinking_buddies
+          POSTGRES_DB: drinking_buddies
+        ports:
+          - 5432:5432
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: psycopg2 prerequisites
+        run: sudo apt-get install libpq-dev
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements/production.txt
+      - name: run migrations
+        run: python manage.py migrate
+        env:
+          SECRET_KEY: dummy
+          POSTGRES_USER: drinking_buddies
+          POSTGRES_PASSWORD: drinking_buddies
+          POSTGRES_DB: drinking_buddies
