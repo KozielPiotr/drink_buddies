@@ -16,3 +16,8 @@ to run:
     ```bash
     sudo docker run -p 5432:5432 -e POSTGRES_USER=drinking_buddies -e POSTGRES_PASSWORD=drinking_buddies -e POSTGRES_DB=drinking_buddies postgres:12.4-alpine
     ```
+
+3. Create new superuser
+    ```shell
+    $ python manage.py createsuperuser
+    ```
