@@ -28,7 +28,8 @@ jobs:
         run: flake8 drinking_buddies
         continue-on-error: true
 
-  build:
+  tests:
+    needs: linters
     runs-on: ubuntu-latest
     services:
       postgres:
@@ -52,9 +53,17 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements/production.txt
+          pip install -r requirements/tests.txt
       - name: run migrations
-        run: python manage.py migrate
+        run: |
+          python manage.py migrate
+        env:
+          SECRET_KEY: dummy
+          POSTGRES_USER: drinking_buddies
+          POSTGRES_PASSWORD: drinking_buddies
+          POSTGRES_DB: drinking_buddies
+      - name: run tests
+        run: pytest
         env:
           SECRET_KEY: dummy
           POSTGRES_USER: drinking_buddies

@@ -1,0 +1,394 @@
+[
+    {
+        "model": "alco_species.AlcoholType",
+        "pk": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+        "fields": {
+            "name": "Strong",
+            "description": "High percentage drinks."
+        }
+    },
+    {
+        "model": "alco_species.AlcoholType",
+        "pk": "2b7337f6-88d9-48e0-99df-06f0bd44a086",
+        "fields": {
+            "name": "Wine",
+            "description": "Wines of all kinds."
+        }
+    },
+    {
+        "model": "alco_species.AlcoholType",
+        "pk": "d5ac8f78-891c-4d19-990a-957f0b4172e1",
+        "fields": {
+            "name": "Beer",
+            "description": "Light, strong, dark... We all love them."
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "bd0d970a-e4f1-41b4-bc75-3308c7d8df31",
+        "fields": {
+            "name": "Absinthe",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "8d8891f1-c955-4c64-8045-5ec1b2da9c02",
+        "fields": {
+            "name": "Arak",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "447c8266-79e9-49b5-a17e-6b0db6715905",
+        "fields": {
+            "name": "Moonshine",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "e22432c8-559b-404e-8e22-085c163c9acb",
+        "fields": {
+            "name": "Bourbon whiskey",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "16d38d50-898c-4930-ba70-706d0a8fde5b",
+        "fields": {
+            "name": "Calvados",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "7dd43c2f-355c-4164-ac05-b4e5a3dedea5",
+        "fields": {
+            "name": "Gin",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "d1acec73-3c2e-457b-a0db-3cfb73a8cfdf",
+        "fields": {
+            "name": "Grappa",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "5ceb03a6-1484-4e4d-b03f-9997b064f45c",
+        "fields": {
+            "name": "Cognac",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "7e0c418c-9f9b-4748-ac46-03aaa2c98cd0",
+        "fields": {
+            "name": "Rakia",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "50838376-3ddb-4bcc-800d-48c619b6b07d",
+        "fields": {
+            "name": "Brandy",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c",
+        "fields": {
+            "name": "Liqueur",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "9face98f-c1c2-4f9a-84d5-25463f49faa6",
+        "fields": {
+            "name": "Advocat",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "087b2f31-e235-4f41-9d3c-d3cd50f0fcb7",
+        "fields": {
+            "name": "Allasch",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "68a9c05a-fa74-496d-95f8-7708acf1396e",
+        "fields": {
+            "name": "Amaretto",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "32b509ce-0264-4b5c-9cd3-1d74e2655d6b",
+        "fields": {
+            "name": "Malibu",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "fd88f4eb-7a80-4296-ab9c-925cafef8522",
+        "fields": {
+            "name": "Sambuca",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "d26eff72-da09-4814-9f1e-8477856ab484",
+        "fields": {
+            "name": "Nalewka",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "f4c1cb8c-b890-4dd0-8296-cd1d615d34f3",
+        "fields": {
+            "name": "Pio\u0142un\u00f3wka",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "61b4b08d-c7ee-4635-9ca4-3511d2160c3c",
+        "fields": {
+            "name": "Orzech\\u00f3wka",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "702ccd95-eba2-425d-b992-b1502a7c66e2",
+        "fields": {
+            "name": "Lemon liqueur",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "e78ba6a3-a9e8-4bd5-a461-00dd4e4d6a65",
+        "fields": {
+            "name": "Malin\\u00f3wka",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "83316829-b3c0-4a66-8bd7-aefdbba78b68",
+        "fields": {
+            "name": "Wi\\u015bni\\u00f3wka",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "b3bf9fb6-282c-42dd-8a06-e345a20b08f8",
+        "fields": {
+            "name": "Dereni\\u00f3wka",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "f03ce466-9d07-456d-9af6-6ce6fd135cfe",
+        "fields": {
+            "name": "Smorodin\\u00f3wka",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "6f244279-ebb8-45a8-a12b-0aa0f1c388e1",
+        "fields": {
+            "name": "Ratafia",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "1dfc90d9-edd2-4ae4-8944-806184446f95",
+        "fields": {
+            "name": "Rum",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "3d3653aa-8fdc-4049-b65b-346903eaeaa1",
+        "fields": {
+            "name": "Rumtopf",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "dd69b09e-2a56-4a27-ab7d-2671ba546176",
+        "fields": {
+            "name": "Slivovitz",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "e41b092e-d7e0-427b-8470-7b48764576a8",
+        "fields": {
+            "name": "Tequila",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "0cc040cb-6e23-49b2-8e28-237a8a7fc6b8",
+        "fields": {
+            "name": "Whisky",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "8c4dc371-ce7a-44da-bb16-84a69dae493a",
+        "fields": {
+            "name": "Vodka",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "5bd95679-8c8c-4170-9e67-28339d4b47be",
+        "fields": {
+            "name": "Siwucha",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "d0c843e7-6df9-4251-9380-bc1589de185e",
+        "fields": {
+            "name": "Schnapps",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "c8da6a37-41a5-4ad8-a550-5a0dd21be71a",
+        "fields": {
+            "name": "Palinka",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "bcb465a5-91e7-4776-8293-1328a956c6b7",
+        "fields": {
+            "name": "\\u017bubr\\u00f3wka",
+            "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
+            "parent": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "93fed55d-0189-4d00-b5a8-cb2456f13d68",
+        "fields": {
+            "name": "Port wine",
+            "type": "2b7337f6-88d9-48e0-99df-06f0bd44a086"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "f48510a8-7913-4606-b2b8-2104af35b8b8",
+        "fields": {
+            "name": "Sangria",
+            "type": "2b7337f6-88d9-48e0-99df-06f0bd44a086"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "8f672bb6-3fcd-4788-b041-8d139382d77c",
+        "fields": {
+            "name": "Vermouth",
+            "type": "2b7337f6-88d9-48e0-99df-06f0bd44a086"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "c5f576f7-38db-48ca-8c5f-b839324ed7b6",
+        "fields": {
+            "name": "Champagne",
+            "type": "2b7337f6-88d9-48e0-99df-06f0bd44a086"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "c558daf9-604e-48b9-b53e-27e92e64ddf9",
+        "fields": {
+            "name": "Cava",
+            "type": "2b7337f6-88d9-48e0-99df-06f0bd44a086"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "7a813cd6-0ef1-40a9-8f64-965ff9d581a7",
+        "fields": {
+            "name": "Cider",
+            "type": "2b7337f6-88d9-48e0-99df-06f0bd44a086"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "8a548dfc-b7c7-4315-9a86-a5a32655ba69",
+        "fields": {
+            "name": "Cheap wine",
+            "type": "2b7337f6-88d9-48e0-99df-06f0bd44a086"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "3c58b37d-9c6a-4c7e-a4ad-04dd19d293c9",
+        "fields": {
+            "name": "Light",
+            "type": "d5ac8f78-891c-4d19-990a-957f0b4172e1"
+        }
+    },
+    {
+        "model": "alco_species.AlcoholGroup",
+        "pk": "221b1c6c-1593-4143-951d-ab0776735801",
+        "fields": {
+            "name": "Dark",
+            "type": "d5ac8f78-891c-4d19-990a-957f0b4172e1"
+        }
+    }
+]

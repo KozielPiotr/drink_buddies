@@ -1,3 +1,4 @@
 -r production.txt
 
+factory-boy
 pytest-django
