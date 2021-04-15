@@ -21,3 +21,8 @@ to run locally:
     ```shell
     $ python manage.py createsuperuser
     ```
+
+4. Populate database
+    ```shell
+    $ python manage.py loaddata species
+    ```

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "drinking_buddies.drinking_auth",
+    "drinking_buddies.alco_species",
 ]
 
 MIDDLEWARE = [
