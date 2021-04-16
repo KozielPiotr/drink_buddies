@@ -7,7 +7,7 @@ from .models import User
 
 
 class UserAdmin(BaseUserAdmin):
-    """Admin view for UserAdmin.."""
+    """Admin view for UserAdmin."""
 
     fieldsets = (
         (None, {"fields": ("username", "email", "password", "last_login")}),
