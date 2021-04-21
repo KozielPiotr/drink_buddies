@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "graphene_django",
     "drinking_buddies.drinking_auth",
     "drinking_buddies.alco_species",
 ]
@@ -53,6 +54,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "drinking_buddies.urls"
+
+GRAPHENE = {"SCHEMA": "drinking_buddies.schema.schema"}
 
 TEMPLATES = [
     {
