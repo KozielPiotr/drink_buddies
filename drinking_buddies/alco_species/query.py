@@ -21,9 +21,9 @@ class AlcoTypeQuery(graphene.ObjectType):
 class AlcoGroupQuery(graphene.ObjectType):
     """Schema for full AlcoholGroup model."""
 
-    all_groups_no_parent = DjangoListField(AlcoGroupType)
+    all_groups = DjangoListField(AlcoGroupType)
 
-    def resolve_all_groups_no_parent(root, info, **kwargs):
-        """Returns all alcohol groups without parent."""
+    def resolve_all_groups(root, info, **kwargs):
+        """Returns all alcohol groups."""
 
-        return AlcoholGroup.objects.filter(parent=None).all()
+        return AlcoholGroup.objects.all()

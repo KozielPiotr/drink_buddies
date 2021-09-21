@@ -10,7 +10,7 @@ class AlcoTypeType(DjangoObjectType):
 
     class Meta:
         model = AlcoholType
-        fields = ("id", "name", "groups")
+        fields = ("id", "name", "groups", "description")
 
 
 class AlcoGroupType(DjangoObjectType):
