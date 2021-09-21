@@ -92,7 +92,7 @@ class TestAlcoGroupQuery(GraphQLTestCase):
                 type{
                   id
                 }
-                parent{
+                parentGroup{
                   id
                 }
                 subGroups{
@@ -115,7 +115,7 @@ class TestAlcoGroupQuery(GraphQLTestCase):
                 type{
                   id
                 }
-                parent{
+                parentGroup{
                   id
                 }
                 subGroups{
@@ -130,8 +130,8 @@ class TestAlcoGroupQuery(GraphQLTestCase):
         obj = AlcoholGroup.objects.all()[0]
         resp = self.retrieve_alco_group_by_id_query(obj.id)
         content = json.loads(resp.content)
-        expected_fields = ["id", "name", "type", "parent", "subGroups"]
-
+        expected_fields = ["id", "name", "type", "parentGroup", "subGroups"]
+        print(content)
         assert resp.status_code == 200
         self.assertResponseNoErrors(resp)
         retrieved_fields = content["data"]["groupById"].keys()
@@ -139,16 +139,16 @@ class TestAlcoGroupQuery(GraphQLTestCase):
         assert content["data"]["groupById"]["id"] == str(obj.id)
         assert content["data"]["groupById"]["name"] == obj.name
         assert content["data"]["groupById"]["type"]["id"] == str(obj.type.id)
-        if obj.parent:
-            assert content["data"]["groupById"]["parent"]["id"] == str(obj.parent.id)
+        if obj.parent_group:
+            assert content["data"]["groupById"]["parentGroup"]["id"] == str(obj.parent_group.id)
         else:
-            assert content["data"]["groupById"]["parent"] is None
+            assert content["data"]["groupById"]["parentGroup"] is None
         assert len(content["data"]["groupById"]["subGroups"]) == len(obj.sub_groups.all())
 
     def test_retrieve_all_groups(self):
         resp = self.retrieve_all_alco_groups_query()
         content = json.loads(resp.content)
-        expected_fields = ["id", "name", "type", "parent", "subGroups"]
+        expected_fields = ["id", "name", "type", "parentGroup", "subGroups"]
 
         assert resp.status_code == 200
         self.assertResponseNoErrors(resp)
