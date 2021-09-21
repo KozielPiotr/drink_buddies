@@ -1,4 +1,4 @@
-# pylint: disable=missing-docstring
+# pylint: disable=missing-docstring, no-member
 """
 Queries tests.
 """
@@ -19,8 +19,8 @@ class TestAlcoTypeQuery(GraphQLTestCase):
     def retrieve_alco_type_by_id_query(self, obj_id):
         return self.query(
             """
-            query typeById($id: UUID!){
-              typeById(id: $id){
+            query typeById($typeId: UUID!){
+              typeById(typeId: $typeId){
                 id
                 name
                 description
@@ -31,7 +31,7 @@ class TestAlcoTypeQuery(GraphQLTestCase):
             }
             """,
             op_name="typeById",
-            variables={"id": str(obj_id)},
+            variables={"typeId": str(obj_id)},
         )
 
     def retrieve_all_alco_types_query(self):
@@ -85,8 +85,8 @@ class TestAlcoGroupQuery(GraphQLTestCase):
     def retrieve_alco_group_by_id_query(self, obj_id):
         return self.query(
             """
-            query groupById($id: UUID!){
-              groupById(id: $id){
+            query groupById($groupId: UUID!){
+              groupById(groupId: $groupId){
                 id
                 name
                 type{
@@ -102,7 +102,7 @@ class TestAlcoGroupQuery(GraphQLTestCase):
             }
             """,
             op_name="groupById",
-            variables={"id": str(obj_id)},
+            variables={"groupId": str(obj_id)},
         )
 
     def retrieve_all_alco_groups_query(self):
@@ -131,7 +131,7 @@ class TestAlcoGroupQuery(GraphQLTestCase):
         resp = self.retrieve_alco_group_by_id_query(obj.id)
         content = json.loads(resp.content)
         expected_fields = ["id", "name", "type", "parentGroup", "subGroups"]
-        print(content)
+
         assert resp.status_code == 200
         self.assertResponseNoErrors(resp)
         retrieved_fields = content["data"]["groupById"].keys()
