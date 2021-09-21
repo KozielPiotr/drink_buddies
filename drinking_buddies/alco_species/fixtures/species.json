@@ -117,7 +117,7 @@
         "fields": {
             "name": "Advocat",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
+            "parent_group": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
         }
     },
     {
@@ -126,7 +126,7 @@
         "fields": {
             "name": "Allasch",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
+            "parent_group": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
         }
     },
     {
@@ -135,7 +135,7 @@
         "fields": {
             "name": "Amaretto",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
+            "parent_group": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
         }
     },
     {
@@ -144,7 +144,7 @@
         "fields": {
             "name": "Malibu",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
+            "parent_group": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
         }
     },
     {
@@ -153,7 +153,7 @@
         "fields": {
             "name": "Sambuca",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
+            "parent_group": "f8a7cdf8-e0bd-47fb-9dee-c72225e0651c"
         }
     },
     {
@@ -170,7 +170,7 @@
         "fields": {
             "name": "Pio\u0142un\u00f3wka",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+            "parent_group": "d26eff72-da09-4814-9f1e-8477856ab484"
         }
     },
     {
@@ -179,7 +179,7 @@
         "fields": {
             "name": "Orzech\\u00f3wka",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+            "parent_group": "d26eff72-da09-4814-9f1e-8477856ab484"
         }
     },
     {
@@ -188,7 +188,7 @@
         "fields": {
             "name": "Lemon liqueur",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+            "parent_group": "d26eff72-da09-4814-9f1e-8477856ab484"
         }
     },
     {
@@ -197,7 +197,7 @@
         "fields": {
             "name": "Malin\\u00f3wka",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+            "parent_group": "d26eff72-da09-4814-9f1e-8477856ab484"
         }
     },
     {
@@ -206,7 +206,7 @@
         "fields": {
             "name": "Wi\\u015bni\\u00f3wka",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+            "parent_group": "d26eff72-da09-4814-9f1e-8477856ab484"
         }
     },
     {
@@ -215,7 +215,7 @@
         "fields": {
             "name": "Dereni\\u00f3wka",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+            "parent_group": "d26eff72-da09-4814-9f1e-8477856ab484"
         }
     },
     {
@@ -224,7 +224,7 @@
         "fields": {
             "name": "Smorodin\\u00f3wka",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "d26eff72-da09-4814-9f1e-8477856ab484"
+            "parent_group": "d26eff72-da09-4814-9f1e-8477856ab484"
         }
     },
     {
@@ -289,7 +289,7 @@
         "fields": {
             "name": "Siwucha",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
+            "parent_group": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
         }
     },
     {
@@ -298,7 +298,7 @@
         "fields": {
             "name": "Schnapps",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
+            "parent_group": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
         }
     },
     {
@@ -307,7 +307,7 @@
         "fields": {
             "name": "Palinka",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
+            "parent_group": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
         }
     },
     {
@@ -316,7 +316,7 @@
         "fields": {
             "name": "\\u017bubr\\u00f3wka",
             "type": "589c5b3a-2f8a-4ca9-920f-a8f35d312d5b",
-            "parent": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
+            "parent_group": "8c4dc371-ce7a-44da-bb16-84a69dae493a"
         }
     },
     {

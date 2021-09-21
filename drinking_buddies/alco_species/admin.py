@@ -18,8 +18,8 @@ class AlcoholGroupAdmin(admin.ModelAdmin):
     model = AlcoholGroup
 
     ordering = ["name"]
-    list_display = ["name", "parent", "type"]
-    list_filter = ["type", "parent", "name"]
+    list_display = ["name", "parent_group", "type"]
+    list_filter = ["type", "parent_group", "name"]
 
 
 admin.site.register(AlcoholType, AlcoholTypeAdmin)

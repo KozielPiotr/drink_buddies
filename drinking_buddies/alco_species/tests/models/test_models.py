@@ -33,7 +33,7 @@ class TestAlcoholGroup:
 
         assert len(AlcoholGroup.objects.all()) == 1
         new_group = AlcoholGroup.objects.first()
-        assert new_group.parent is None
+        assert new_group.parent_group is None
         assert new_group.name == group.name
         assert new_group.type is not None
         assert len(new_group.sub_groups.all()) == 0
@@ -41,25 +41,28 @@ class TestAlcoholGroup:
     @pytest.mark.django_db
     def test_group_with_subgroup(self):
         sub_group = AlcoholGroupFactory()
-        sub_group.parent = AlcoholGroupFactory()
+        sub_group.parent_group = AlcoholGroupFactory()
         sub_group.save()
 
-        parent = sub_group.parent
+        parent_group = sub_group.parent_group
 
         assert len(AlcoholGroup.objects.all()) == 2
         sub = AlcoholGroup.objects.get(id=sub_group.id)
-        assert sub.parent.id == parent.id
+        assert sub.parent_group.id == parent_group.id
 
     @pytest.mark.django_db
-    def test_group_repr_with_parent(self):
+    def test_group_repr_with_parent_group(self):
         sub_group = AlcoholGroupFactory()
-        sub_group.parent = AlcoholGroupFactory()
+        sub_group.parent_group = AlcoholGroupFactory()
         sub_group.save()
 
-        assert repr(sub_group) == f"<AlcoholGroup {sub_group.name}, id={sub_group.id}, parent={sub_group.parent.name}>"
+        assert (
+            repr(sub_group)
+            == f"<AlcoholGroup {sub_group.name}, id={sub_group.id}, parent_group={sub_group.parent_group.name}>"
+        )
 
     @pytest.mark.django_db
-    def test_group_repr_no_parent(self):
+    def test_group_repr_no_parent_group(self):
         group = AlcoholGroupFactory()
 
         assert repr(group) == f"<AlcoholGroup {group.name}, id={group.id}>"

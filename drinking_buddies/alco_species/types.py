@@ -18,4 +18,4 @@ class AlcoGroupType(DjangoObjectType):
 
     class Meta:
         model = AlcoholGroup
-        fields = ("id", "name", "type", "parent", "sub_groups")
+        fields = ("id", "name", "type", "parent_group", "sub_groups")

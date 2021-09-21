@@ -23,7 +23,7 @@ class AlcoholGroup(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     name = models.CharField(max_length=255, unique=True, null=False, blank=False)
-    parent = models.ForeignKey(
+    parent_group = models.ForeignKey(
         "self",
         related_name="sub_groups",
         null=True,
@@ -39,8 +39,8 @@ class AlcoholGroup(models.Model):
     )
 
     def __repr__(self):
-        if self.parent:
-            return f"<AlcoholGroup {self.name}, id={self.id}, parent={self.parent.name}>"
+        if self.parent_group:
+            return f"<AlcoholGroup {self.name}, id={self.id}, parent_group={self.parent_group.name}>"
         return f"<AlcoholGroup {self.name}, id={self.id}>"
 
     def __str__(self):

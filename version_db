@@ -1,2 +1,2 @@
-alco_species: 0001_add_alcohol_group_and_type_models
+alco_species: 0002_change_field_parent_to_parent_group
 drinking_auth: 0002_add_alcohol_group_model
