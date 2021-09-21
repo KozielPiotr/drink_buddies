@@ -20,9 +20,7 @@ class Migration(migrations.Migration):
                 ("password", models.CharField(max_length=128, verbose_name="password")),
                 (
                     "id",
-                    models.UUIDField(
-                        default=uuid.uuid4, primary_key=True, serialize=False
-                    ),
+                    models.UUIDField(default=uuid.uuid4, primary_key=True, serialize=False),
                 ),
                 ("username", models.CharField(max_length=254, unique=True)),
                 ("email", models.EmailField(max_length=254, unique=True)),
