@@ -6,3 +6,5 @@
 - basic database models
 - query for AlcoGroup list
 - query for AlcoType list
+- query for AlcoGroup by id
+- query for AlcoType by id
