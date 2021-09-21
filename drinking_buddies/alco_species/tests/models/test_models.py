@@ -56,10 +56,7 @@ class TestAlcoholGroup:
         sub_group.parent = AlcoholGroupFactory()
         sub_group.save()
 
-        assert (
-            repr(sub_group)
-            == f"<AlcoholGroup {sub_group.name}, id={sub_group.id}, parent={sub_group.parent.name}>"
-        )
+        assert repr(sub_group) == f"<AlcoholGroup {sub_group.name}, id={sub_group.id}, parent={sub_group.parent.name}>"
 
     @pytest.mark.django_db
     def test_group_repr_no_parent(self):

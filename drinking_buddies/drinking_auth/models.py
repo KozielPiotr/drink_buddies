@@ -14,9 +14,7 @@ from django.utils import timezone
 class UserManager(BaseUserManager):
     """Overwrites default django user manager."""
 
-    def _create_user(
-        self, username, email, password, is_staff, is_superuser, **extra_fields
-    ):
+    def _create_user(self, username, email, password, is_staff, is_superuser, **extra_fields):
         """
         Creates new User object.
 
@@ -55,9 +53,7 @@ class UserManager(BaseUserManager):
             password (str): user's password
         """
 
-        return self._create_user(
-            username, email, password, False, False, **extra_fields
-        )
+        return self._create_user(username, email, password, False, False, **extra_fields)
 
     def create_superuser(self, username, email, password, **extra_fields):
         """

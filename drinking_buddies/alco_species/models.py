@@ -40,9 +40,7 @@ class AlcoholGroup(models.Model):
 
     def __repr__(self):
         if self.parent:
-            return (
-                f"<AlcoholGroup {self.name}, id={self.id}, parent={self.parent.name}>"
-            )
+            return f"<AlcoholGroup {self.name}, id={self.id}, parent={self.parent.name}>"
         return f"<AlcoholGroup {self.name}, id={self.id}>"
 
     def __str__(self):
