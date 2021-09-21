@@ -11,8 +11,8 @@ class AlcoholTypeFactory(factory.django.DjangoModelFactory):
         model = models.AlcoholType
         django_get_or_create = ("name", "description")
 
-    name = factory.Sequence(lambda n: "AlcoholType %d" % n)
-    description = factory.Sequence(lambda n: "AlcoholType description %d" % n)
+    name = factory.Sequence(lambda n: f"AlcoholType {n}")
+    description = factory.Sequence(lambda n: f"AlcoholType description {n}")
 
 
 class AlcoholGroupFactory(factory.django.DjangoModelFactory):
@@ -22,5 +22,5 @@ class AlcoholGroupFactory(factory.django.DjangoModelFactory):
         model = models.AlcoholGroup
         django_get_or_create = ("name", "type")
 
-    name = factory.Sequence(lambda n: "AlcoholGroup %d" % n)
+    name = factory.Sequence(lambda n: f"AlcoholGroup {n}")
     type = factory.SubFactory(AlcoholTypeFactory)

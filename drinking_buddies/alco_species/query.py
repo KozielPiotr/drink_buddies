@@ -1,4 +1,4 @@
-# pylint: disable=no-self-argument, unused-argument, no-self-use, too-few-public-methods
+# pylint: disable=no-self-argument, unused-argument, no-self-use, too-few-public-methods, invalid-name
 """All alco_species application queries."""
 import graphene
 from graphene_django import DjangoListField
@@ -10,13 +10,13 @@ from drinking_buddies.alco_species.types import AlcoGroupType, AlcoTypeType
 class AlcoTypeQuery(graphene.ObjectType):
     """Schema for full AlcoholType model."""
 
-    type_by_id = graphene.Field(AlcoTypeType, id=graphene.UUID())
+    type_by_id = graphene.Field(AlcoTypeType, type_id=graphene.UUID())
     all_types = DjangoListField(AlcoTypeType)
 
-    def resolve_type_by_id(root, info, id):
+    def resolve_type_by_id(root, info, type_id):
         """Returns alcohol type by given id."""
 
-        return AlcoholType.objects.get(pk=id)
+        return AlcoholType.objects.get(pk=type_id)
 
     def resolve_all_types(root, info, **kwargs):
         """Returns all alcohol types."""
@@ -27,13 +27,13 @@ class AlcoTypeQuery(graphene.ObjectType):
 class AlcoGroupQuery(graphene.ObjectType):
     """Schema for full AlcoholGroup model."""
 
-    group_by_id = graphene.Field(AlcoGroupType, id=graphene.UUID())
+    group_by_id = graphene.Field(AlcoGroupType, group_id=graphene.UUID())
     all_groups = DjangoListField(AlcoGroupType)
 
-    def resolve_group_by_id(root, info, id):
+    def resolve_group_by_id(root, info, group_id):
         """Returns alcohol group by given id."""
 
-        return AlcoholGroup.objects.get(pk=id)
+        return AlcoholGroup.objects.get(pk=group_id)
 
     def resolve_all_groups(root, info, **kwargs):
         """Returns all alcohol groups."""
