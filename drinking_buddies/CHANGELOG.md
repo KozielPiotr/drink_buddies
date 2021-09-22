@@ -8,4 +8,5 @@
 - query for AlcoType list
 - query for AlcoGroup by id
 - query for AlcoType by id
+- query for User list
 - mutation for creating new user
