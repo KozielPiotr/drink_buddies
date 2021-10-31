@@ -55,6 +55,18 @@ class UserManager(BaseUserManager):
 
         return self._create_user(username, email, password, False, False, **extra_fields)
 
+    def create_staffuser(self, username, email, password, **extra_fields):
+        """
+        Provides additional data to _create_user method.
+
+        Args:
+            username (str): user's username
+            email (str): user's email
+            password (str): user's password
+        """
+
+        return self._create_user(username, email, password, True, False, **extra_fields)
+
     def create_superuser(self, username, email, password, **extra_fields):
         """
         Creates superuser.
