@@ -10,3 +10,4 @@
 - query for AlcoType by id
 - query for User list
 - mutation for creating new user
+- JWT authentication
