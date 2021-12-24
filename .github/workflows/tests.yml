@@ -1,35 +1,11 @@
+name: Tests
 
-name: Python application
-
-on: [push]
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
-  linters:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements/development.txt
-      - name: Pylint
-        run: pylint --load-plugins pylint_django --django-settings-module=drinking_buddies.settings --fail-under=9 drinking_buddies
-        env:
-          SECRET_KEY: dummy
-        continue-on-error: true
-      - name: Black
-        run: black --check ./ --line-length=120
-      - name: Flake8
-        run: flake8 drinking_buddies
-        continue-on-error: true
-
   tests:
-    needs: linters
     runs-on: ubuntu-latest
     services:
       postgres:

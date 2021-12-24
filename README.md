@@ -1,3 +1,5 @@
+![example workflow](https://github.com/KozielPiotr/drink_buddies/actions/workflows/linters.yml/badge.svg)
+![example workflow](https://github.com/KozielPiotr/drink_buddies/actions/workflows/tests.yml/badge.svg)
 # Drink buddies
 
 ### Table of contents:
