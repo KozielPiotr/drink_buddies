@@ -1,0 +1,70 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine.
+# See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+
+# Orbs are reusable packages of CircleCI configuration that you may share across projects, enabling you to create encapsulated, parameterized commands, jobs, and executors that can be used across multiple projects.
+# See: https://circleci.com/docs/2.0/orb-intro/
+orbs:
+  # The python orb contains a set of prepackaged CircleCI configuration you can use repeatedly in your configuration files
+  # Orb commands and jobs help you with common scripting around a language/tool
+  # so you dont have to copy and paste it everywhere.
+  # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/python
+  python: circleci/python@1.5
+
+# Define a job to be invoked later in a workflow.
+# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+jobs:
+  linters:
+    docker:
+      - image: cimg/python:3.8.10
+    environment:
+      SECRET_KEY: dummy
+    steps:
+      - checkout
+      - run:
+          name: install requirements
+          command: |
+            pip install --upgrade pip
+            pip install -r requirements/development.txt
+      - run:
+          name: Pylint
+          command: pylint --load-plugins pylint_django --django-settings-module=drinking_buddies.settings --fail-under=9 drinking_buddies
+      - run:
+          name: Black
+          command: black --check ./ --line-length=120
+      - run:
+          name: Flake8
+          command: flake8 drinking_buddies || true
+  tests:
+    docker:
+      - image: cimg/python:3.8.10
+      - image: postgres:12.4
+        environment:
+          SECRET_KEY: dummy
+          POSTGRES_USER: drinking_buddies
+          POSTGRES_PASSWORD: drinking_buddies
+          POSTGRES_DB: drinking_buddies
+    steps:
+      - checkout
+      - run:
+          name: install requirements
+          command: |
+            pip install --upgrade pip
+            pip install -r requirements/tests.txt
+      - run:
+          environment:
+            SECRET_KEY: dummy
+            POSTGRES_USER: drinking_buddies
+            POSTGRES_PASSWORD: drinking_buddies
+            POSTGRES_DB: drinking_buddies
+          name: run tests
+          command: ls;pytest -v
+
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+workflows:
+  sample: # This is the name of the workflow, feel free to change it to better match your workflow.
+    # Inside the workflow, you define the jobs you want to run.
+    jobs:
+      - linters
+      - tests

@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1"]
+ALLOWED_HOSTS = ["0.0.0.0", "127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -49,13 +49,25 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# Authentication backends
+AUTHENTICATION_BACKENDS = [
+    "graphql_jwt.backends.JSONWebTokenBackend",
+    "django.contrib.auth.backends.ModelBackend",
+]
+
 ROOT_URLCONF = "drinking_buddies.urls"
 
-GRAPHENE = {"SCHEMA": "drinking_buddies.schema.schema"}
+GRAPHENE = {
+    "SCHEMA": "drinking_buddies.schema.schema",
+    "MIDDLEWARE": [
+        "graphql_jwt.middleware.JSONWebTokenMiddleware",
+    ],
+}
 
 TEMPLATES = [
     {
