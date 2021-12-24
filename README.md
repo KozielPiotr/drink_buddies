@@ -2,16 +2,17 @@
 
 ### Table of contents:
 1. [Setup](#setup)
-    1. [run locally](#run_locally)
+    1. [Run locally](#run_locally)
         1. [Environment variables](#env_variables)
         2. [Database setup](#database_setup)
         3. [Database migration](#database_migration)
         4. [New superuser creation](#create_superuser)
         5. [Database population](#populate_database)
-    
+2. [Graphql schema](https://kozielpiotr.github.io/drink_buddies/graphql_schema.html)
+
 
 ## Setup <a name="setup"></a>
-### to run locally: <a name="run_locally"></a>
+### To run locally: <a name="run_locally"></a>
 1. Environment variables <a name="env_variables"></a>
     1. Create **.env** file at the top level of the project.
 
@@ -29,7 +30,7 @@
    Example above has user, password and name same as in sample env file. Be sure to change it if you are using different ones.
 
 3. Database migration: <a name="database_migration"></a>
-    
+
     ```shell
     $ python manage.py migrate
     ```
