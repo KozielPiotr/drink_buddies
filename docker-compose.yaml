@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:12.4-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    command: bash -c "python manage.py migrate && python manage.py loaddata species && python manage.py runserver 0.0.0.0:8000"
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - SECRET_KEY=${SECRET_KEY}
+      - POSTGRES_HOST=db
+    depends_on:
+      - db
