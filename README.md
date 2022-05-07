@@ -10,7 +10,7 @@
         3. [Database migration](#database_migration)
         4. [New superuser creation](#create_superuser)
         5. [Database population](#populate_database)
-2. [Graphql schema](https://kozielpiotr.github.io/drink_buddies/graphql_schema.html)
+2. [Graphql schema](https://kozielpiotr.github.io/documentations/drinking_buddies_graphql_schema.html)
 
 
 ## Setup <a name="setup"></a>
